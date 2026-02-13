@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Soft Glow Overlay */
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent);
+    pointer-events:none;
+}
+
+.container{
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(20px);
+    padding:50px;
+    border-radius:30px;
+    text-align:center;
+    width:90%;
+    max-width:800px;
+    color:rgb(0, 0, 0);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 1.5s ease;
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.message p{
+    margin:18px 0;
+    line-height:1.8;
+    font-weight:300;
+}
+
+.highlight{
+    font-weight:500;
+    font-size:1.1rem;
+}
+
+.btn{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff6b81;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(255,255,255,0.6);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(255,255,255,0.9);
+}
+
+.hidden{
+    display:none;
+    margin-top:15px;
+    font-weight:500;
+}
+
+.divider{
+    margin:40px auto;
+    width:60%;
+    height:1px;
+    background:rgba(255,255,255,0.4);
+}
+
+h2{
+    font-family:'Playfair Display', serif;
+    margin-bottom:20px;
+}
+
+.slider img{
+    width:100%;
+    border-radius:25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: opacity 1s ease-in-out;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-10px;
+    font-size:20px;
+    animation: rise 6s linear infinite;
+    opacity:0.8;
+}
+
+@keyframes rise{
+    0%{transform: translateY(0); opacity:0.8;}
+    100%{transform: translateY(-110vh); opacity:0;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
